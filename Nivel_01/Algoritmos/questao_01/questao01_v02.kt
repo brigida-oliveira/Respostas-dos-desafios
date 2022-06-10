@@ -1,7 +1,7 @@
 //1. Faça um programa que soma quatro número inteiros e exibe o resultado da soma no console.
 fun main(){
   println("\nPROGRAMA QUE SOMA 4 NÚMEROS\n")
-  println("Digite o primeiro número: ")
+  print("Digite o primeiro número: ")
   val n1 = readLine()!!.toInt()
   
   print("Digite o segundo número: ")
