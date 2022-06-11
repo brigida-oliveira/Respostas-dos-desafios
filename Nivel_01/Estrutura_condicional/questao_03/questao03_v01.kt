@@ -2,18 +2,39 @@
 fun main() {
     println("\nPROGRAMA QUE ORDENA 3 NÚMEROS\n")
 
-    val numeros = arrayOf(1, 5, 2)
+    val n1 = 5
+    val n2 = 2
+    val n3 = 4
 
-    println("Números escolhidos: ${numeros[0]}, ${numeros[1]}, ${numeros[2]}")
+    println("Números escolhidos: $n1, $n2, $n3")
 
-    
-for(posicaoAtual in 0 until (numeros.size -1)) {
-    if( numeros[posicaoAtual] > numeros[posicaoAtual+1]) {
-        val temp = numeros[posicaoAtual]
-        numeros[posicaoAtual] = numeros[posicaoAtual+1]
-        numeros[posicaoAtual+1] = temp
+    val numeros = arrayOf(0, 0, 0)
+
+    if (n1 < n2 && n2 < n3){
+        numeros[0] = n1
+        numeros[1] = n2
+        numeros[2] = n3
+    } else if (n1 < n2 && n3 < n2){
+        numeros[0] = n1
+        numeros[1] = n3
+        numeros[2] = n2
+    } else if (n2 < n1 && n1 < n3){
+        numeros[0] = n2
+        numeros[1] = n1
+        numeros[2] = n3
+    } else if (n2 < n1 && n3 < n1){
+        numeros[0] = n2
+        numeros[1] = n3
+        numeros[2] = n1
+    } else if (n3 < n1 && n1 < n2){
+        numeros[0] = n3
+        numeros[1] = n1
+        numeros[2] = n2
+    } else if (n3 < n1 && n2 < n1){
+        numeros[0] = n3
+        numeros[1] = n2
+        numeros[2] = n1
     }
-}
 
 println("Números ordenados: ${numeros[0]}, ${numeros[1]}, ${numeros[2]}")
 }
